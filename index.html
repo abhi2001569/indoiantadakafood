@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>South Tadaka</title>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      width: 100%;
+      height: 100%;
+    }
+
+    .main {
+      height: 100%;
+      width: 100%;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+    .background-image {
+      height: 95%;    
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      animation: changeBackground 20s infinite;
+    }
+
+    @keyframes changeBackground {
+      0% {
+        background-image: url(https://holycowvegan.net/wp-content/uploads/2022/04/dal-tadka.jpg);
+      }
+      25% {
+        background-image: url(https://cdn.tarladalal.com/members/9306/big/big_dal_tadka,_punjabi_dal_tadka-14908.jpg?size=696X905);
+      }
+      50% {
+        background-image: url(https://www.ohmyveg.co.uk/wp-content/uploads/2021/12/Dal-Tadka-min.jpg.webp);
+      }
+      75% {
+        background-image: url(https://cdn.tarladalal.com/members/9306/big/big_dal_tadka,_punjabi_dal_tadka-14908.jpg?size=696X905);
+      }
+      100% {
+        background-image: url(https://holycowvegan.net/wp-content/uploads/2022/04/dal-tadka.jpg);
+      }
+    }
+
+    .nav1 {
+      background-color: transparent;
+      height: 50px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: rgb(0, 0, 0);
+      font-size: 15px;
+      font-family: 'LXGW WenKai TC', cursive;
+      font-weight: 30;
+      border-bottom: 0.2px solid rgb(0, 0, 0);
+    }
+
+    .nav-header-left {
+      display: flex;
+      gap: 20px;
+      padding-left: 60px;
+      font-weight: bold;
+    }
+
+    .enav-left-elm {
+      border-right: 2px solid rgb(0, 0, 0);
+      padding-right: 15px;
+    }
+
+    .enav-left-elm:hover,
+    .enav-right-elm:hover {
+      filter: drop-shadow(0 0 10px red);
+    }
+
+    .nav-header-left span {
+      color: rgb(154, 154, 9);
+    }
+
+    .nav-header-right {
+      display: flex;
+      gap: 25px;
+      padding-right: 50px;
+      font-weight: bold;
+      font-size: 110%;
+    }
+
+    .enav-right-elm {
+      border-right: 2px solid rgb(69, 87, 86);
+      padding-right: 15px;
+    }
+
+    .nav2 {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      display: flex;
+      color: rgb(247, 246, 255);
+      justify-content: space-between;
+      align-items: center;
+      background-color: rgba(0, 0, 0, 0.7);
+      height: 60px;
+      text-transform: uppercase;
+      z-index: 7000;
+    }
+
+    .nav2-left {
+      padding-left: 20px;
+      font-family: "Slackey", sans-serif;
+      font-size: 140%;
+    }
+
+    .nav2-center {
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+      font-size: 90%;
+    }
+
+    .nav2-end {
+      padding-right: 20px;
+    }
+
+    .text-contain {
+      height: 90%;    
+      width: 100%;
+      color: azure;
+      text-align: center;
+      padding-top: 18%;
+    }
+
+    .text-contain-logo {
+      font-family: "Slackey", sans-serif;
+      font-weight: 800;
+      font-size: 250%;
+      filter: drop-shadow(0 0 10px rgb(249, 6, 6));
+    }
+
+    .text-contain p {
+      filter: drop-shadow(0 0 30px rgb(0, 253, 8));
+      color: rgb(1, 14, 255);
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .header-center {
+      height: 33%;
+      width: 100%;
+      padding-top: 5%;
+      text-align: center;
+      font-size: 100%;
+    }
+
+    .header-center p {
+      font-family: "LXGW WenKai Mono TC", monospace;
+      line-height: 180%;
+      color: rgb(77, 80, 80);
+    }
+
+    .header-center h1 {
+      font-family: "Fasthand", cursive;
+    }
+
+    .card-tadaka {
+      height: 70%;
+      width: 100%;
+      display: flex;
+      overflow-x: auto;
+    }
+
+    .card-tadaka-elm {
+      padding: 2%;
+      flex-shrink: 0;
+      text-align: center;
+      line-height: 150%;
+      font-family: "Fasthand", cursive;
+      width: 200px;
+    }
+
+    .card-tadaka-elm img:hover {
+      filter: drop-shadow(0 0 30px rgb(240, 145, 2));
+      border: 2px double red;
+    }
+
+    .card-tadaka::-webkit-scrollbar {
+      height: 4px;
+    }
+
+    .card-tadaka::-webkit-scrollbar-thumb {
+      background-color: rgb(252, 156, 1);
+      border-radius: 2px;
+    }
+
+    .card-tadaka-elm img {
+      padding: 6%;
+      height: 200px;
+      width: 200px;
+      border: none;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .card-tadaka-elm span {
+      color: red;
+      font-weight: 800;
+    }
+
+    .footer {
+      margin-top: 2%;
+      margin-bottom: 2%;
+      height: 20%;
+      width: 100%;
+      background-color: black;
+      border-top-left-radius: 30vh;
+      border-bottom-right-radius: 30vh;
+      padding-top: 3%;
+      padding-right: 2%;
+    }
+
+    .footer i {
+      color: white;
+    }
+
+    .footer-h2 {
+      text-align: center;
+      color: white;
+      font-family: "Fasthand", cursive;
+    }
+
+    .footer-child p {
+      text-align: center;
+      color: white;
+      font-family: "Fasthand", cursive;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      .nav-header-left,
+      .nav-header-right {
+        display: none;
+      }
+
+      .nav2 {
+        flex-direction: row;
+        align-items: flex-start;
+        height: auto;
+        padding: 10px;
+      }
+
+      .nav2-left,
+      .nav2-end {
+        padding: 10px 0;
+      }
+
+      .nav2-center {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        gap: 10px;
+      }
+
+      .text-contain {
+        padding-top: 25%;
+      }
+
+      .text-contain-logo {
+        font-size: 200%;
+      }
+
+      .text-contain p {
+        font-size: 16px;
+      }
+
+      .card-tadaka-elm {
+        width: 150px;
+      }
+
+      .card-tadaka-elm img {
+        height: 150px;
+        width: 150px;
+      }
+
+      .footer {
+        padding: 10px 2%;
+        border-top-left-radius: 15vh;
+        border-bottom-right-radius: 15vh;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .nav2-left {
+        font-size: 120%;
+      }
+
+      .text-contain {
+        padding-top: 35%;
+      }
+
+      .text-contain-logo {
+        font-size: 150%;
+      }
+
+      .text-contain p {
+        font-size: 14px;
+      }
+
+      .header-center p {
+        font-size: 90%;
+      }
+
+      .card-tadaka-elm {
+        width: 120px;
+      }
+
+      .card-tadaka-elm img {
+        height: 120px;
+        width: 120px;
+      }
+
+      .footer-h2 {
+        font-size: 90%;
+      }
+    }
+  </style>
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="background-image">
+      
+
+        <div class="nav2">
+          <div class="nav2-left">South Tadaka</div>
+          <div class="nav2-center">
+            <div>Home</div>
+            <div>our story</div>
+            <div>special</div>
+            <div>popular</div>
+            <div>Gallery</div>
+            <div>services</div>
+            <div>news</div>
+            <div>pages</div>
+          </div>
+          <div class="nav2-end">Book now</div>
+        </div>
+
+        <div class="text-contain">
+          <h1 class="text-contain-logo">South Tadaka</h1>
+          <br />
+          <p>
+            flavorful spices, aromatic herbs, vibrant colors, rich textures,
+            <br />
+            hearty dishes, tropical fruits, exotic flavors.
+          </p>
+        </div>
+      </div>
+      <div class="nav1">
+        <div class="nav-header-left">
+          <div class="enav-left-elm">Mon-Fri 07:00am-05:00pm</div>
+          <div class="enav-left-elm">mobile no +39 02 87 45 21</div>
+          <div class="enav-left-elm"><span>Indian Foods</span></div>
+        </div>
+
+        <div class="nav-header-right">
+          <div class="enav-right-elm"><i class="ri-user-line"></i></div>
+          <div class="enav-right-elm"><i class="ri-search-line"></i></div>
+          <div class="enav-right-elm"><i class="ri-menu-line"></i></div>
+        </div>
+      </div>
+      <div class="header-center">
+        <p>DISCOVER</p>
+        <h1>Tadka Cuisine Of India</h1>
+        <p>
+          bold flavors, aromatic spices, <br />
+          vibrant colors, hearty dishes, fresh ingredients, cultural richness.
+        </p>
+      </div>
+
+      <div class="card-tadaka">
+        <div class="card-tadaka-elm">
+          <img src="https://spicecravings.com/wp-content/uploads/2021/05/Dal-Tadka-2-768x1152.jpg" /><br />
+          <span>Prize:$550</span>
+          <p>Spacicy dal tadaka</p>
+        </div>
+        <div class="card-tadaka-elm">
+          <img src="https://holycowvegan.net/wp-content/uploads/2022/04/dal-tadka.jpg" />
+          <span>Prize:$550</span>
+          <p>Spacicy dal tadaka</p>
+        </div>
+        <div class="card-tadaka-elm">
+          <img src="https://i0.wp.com/www.sinamontales.com/dotcord/uploads/2016/10/restaurant-style-dal-tadka-how-to-make-best-dal-tadka.1024x1024.jpg?ssl=1" />
+          <span>Prize:$550</span>
+          <p>Spacicy dal tadaka</p>
+        </div>
+        <div class="card-tadaka-elm">
+          <img src="https://i0.wp.com/www.sinamontales.com/dotcord/uploads/2016/10/restaurant-style-dal-tadka-how-to-make-best-dal-tadka.1024x1024-1.jpg?ssl=1" />
+          <span>Prize:$550</span>
+          <p>Spacicy dal tadaka</p>
+        </div>
+        <div class="card-tadaka-elm">
+          <img src="https://veggiedesserts.com/wp-content/uploads/2021/04/tarka-dal-tadka-2-1024x1536.jpg" />
+          <span>Prize:$550</span>
+          <p>Spacicy dal tadaka</p>
+        </div>
+        <div class="card-tadaka-elm">
+          <img src="https://cdn.tarladalal.com/members/9306/big/big_dal_tadka,_punjabi_dal_tadka-14908.jpg?size=696X905" />
+          <span>Prize:$550</span>
+          <p>Spacicy dal tadaka</p>
+        </div>
+        <div class="card-tadaka-elm">
+          <img src="https://myfoodstory.com/wp-content/uploads/2016/09/Dhaba-Dal-Tadka-2.jpg" />
+          <span>Prize:$550</span>
+          <p>Spacicy dal tadaka</p>
+        </div>
+        <div class="card-tadaka-elm">
+          <img src="https://i0.wp.com/www.dhabastyle.com/wp-content/uploads/2017/04/maxresdefault-1.jpg?w=1280&ssl=1" />
+          <span>Prize:$550</span>
+          <p>Spacicy dal tadaka</p>
+        </div>
+        <div class="card-tadaka-elm">
+          <img src="https://www.ohmyveg.co.uk/wp-content/uploads/2021/12/Dal-Tadka-min.jpg.webp" />
+          <span>Prize:$550</span>
+          <p>Spacicy dal tadaka</p>
+        </div>
+        <div class="card-tadaka-elm">
+          <img src="https://holycowvegan.net/wp-content/uploads/2022/04/dal-tadka.jpg" />
+          <span>Prize:$550</span>
+          <p>Spacicy dal tadaka</p>
+        </div>
+      </div>
+      
+
+
+      <div class="footer">
+        <div class="footer-child">
+          <h2 class="footer-h2">South Tadaka</h2><br>
+          <p>
+          2024@ copuright created by bhosle abhishek
+        </div>
+
+      </div>
+    </div>
+  </body>
+</html>
